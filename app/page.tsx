@@ -323,7 +323,7 @@ export default function VDRSystemPage() {
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
           <span style={{ fontSize: "28px", color: THEME.legalGold }}>⚖️</span>
           <div>
-            <h1 style={{ color: THEME.bgIvory, fontSize: "18px", margin: 0, fontWeight: 700, letterSpacing: "0.5px" }}>대법원·로펌 공조형 법률 자산 무결성 VDR 관제소</h1>
+            <h1 style={{ color: THEME.bgIvory, fontSize: "18px", margin: 0, fontWeight: 700, letterSpacing: "0.5px" }}>블록체인 기반 법률 자산 무결성 VDR 관제 시스템</h1>
             <span style={{ color: THEME.legalGold, fontSize: "11px", display: "block", marginTop: "2px" }}>Highest Security Virtual Data Room & Certified Legal Ledger</span>
           </div>
         </div>
@@ -346,7 +346,7 @@ export default function VDRSystemPage() {
       {!account ? (
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "100px 40px", background: `linear-gradient(180deg, ${THEME.paleYellow} 0%, ${THEME.bgIvory} 100%)`, flex: 1 }}>
           <div style={{ fontSize: "80px", marginBottom: "24px", color: THEME.deepBrown }}>🏛️</div>
-          <h2 style={{ color: THEME.deepBrown, fontSize: "32px", fontWeight: 900, margin: "0 0 16px", letterSpacing: "-0.5px" }}>기업 기밀 자산 및 사법 소송 증거물 통제 관제탑</h2>
+          <h2 style={{ color: THEME.deepBrown, fontSize: "32px", fontWeight: 900, margin: "0 0 16px", letterSpacing: "-0.5px" }}>블록체인 기반 법률 자산 무결성 VDR 관제 시스템</h2>
           <p style={{ color: THEME.textSoft, fontSize: "15px", maxWidth: "750px", lineHeight: 1.8, margin: "0 0 40px" }}>
             본 체계는 비밀유지확약(NDA) 대상 M&A 기업 결합 심사 자료 및 특허 소송 유출 핵심 증거물의 무단 위변조 및 부인을 방지하기 위해 이더리움 메인넷 스마트 컨트랙트 원장을 활용합니다.<br />
             감사인 자격 검증을 위한 공인 서명 지갑(MetaMask)을 연동해 주십시오.
