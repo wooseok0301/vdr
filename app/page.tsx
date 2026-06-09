@@ -327,7 +327,7 @@ export default function VDRSystemPage() {
         {account && (
           <div style={{ display: "flex", gap: "24px", alignItems: "center" }}>
             <button onClick={() => setTab("lobby")} style={{ background: "none", border: "none", color: tab === "lobby" ? THEME.legalGold : THEME.bgIvory, fontSize: "14px", fontWeight: "bold", cursor: "pointer" }}>사건 로비</button>
-            <button onClick={() => { if(!activeVdr) { showToast("입장 승인된 워크스페이스가 없습니다.", "err"); return; } setTab("workspace"); }} style={{ background: "none", border: "none", color: tab === "workspace" ? THEME.legalGold : THEME.bgIvory, fontSize: "14px", fontWeight: "bold", cursor: "pointer", opacity: activeVdr ? 1}}>실사 열람실</button>
+            <button onClick={() => { if(!activeVdr) { showToast("입장 승인된 워크스페이스가 없습니다.", "err"); return; } setTab("workspace"); }} style={{ background: "none", border: "none", color: tab === "workspace" ? THEME.legalGold : THEME.bgIvory, fontSize: "14px", fontWeight: "bold", cursor: "pointer", opacity: activeVdr ? 1 : 0.4 }}>실사 열람실</button>
             {isOwner && (
               <button onClick={() => setTab("admin")} style={{ background: "none", border: "none", color: tab === "admin" ? THEME.legalGold : THEME.bgIvory, fontSize: "14px", fontWeight: "bold", cursor: "pointer" }}>감사 대시보드</button>
             )}
