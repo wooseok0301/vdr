@@ -215,10 +215,6 @@ export default function VDRSystemPage() {
       showToast("지갑 연동 상태를 확인해 주세요.", "err");
       return;
     }
-    if (!isValidPermission) {
-      showToast("진입 권한이 없습니다. 관리자의 승인이 필요합니다.", "err");
-      return;
-    }
     setLoading(true);
     try {
       const tx = await contract.joinVDRWorkspace();
@@ -331,7 +327,7 @@ export default function VDRSystemPage() {
         {account && (
           <div style={{ display: "flex", gap: "24px", alignItems: "center" }}>
             <button onClick={() => setTab("lobby")} style={{ background: "none", border: "none", color: tab === "lobby" ? THEME.legalGold : THEME.bgIvory, fontSize: "14px", fontWeight: "bold", cursor: "pointer" }}>사건 로비</button>
-            <button onClick={() => { if(!activeVdr) { showToast("입장 승인된 워크스페이스가 없습니다.", "err"); return; } setTab("workspace"); }} style={{ background: "none", border: "none", color: tab === "workspace" ? THEME.legalGold : THEME.bgIvory, fontSize: "14px", fontWeight: "bold", cursor: "pointer", opacity: activeVdr ? 1 : 0.4 }}>실사 열람실</button>
+            <button onClick={() => { if(!activeVdr) { showToast("입장 승인된 워크스페이스가 없습니다.", "err"); return; } setTab("workspace"); }} style={{ background: "none", border: "none", color: tab === "workspace" ? THEME.legalGold : THEME.bgIvory, fontSize: "14px", fontWeight: "bold", cursor: "pointer", opacity: activeVdr ? 1}}>실사 열람실</button>
             {isOwner && (
               <button onClick={() => setTab("admin")} style={{ background: "none", border: "none", color: tab === "admin" ? THEME.legalGold : THEME.bgIvory, fontSize: "14px", fontWeight: "bold", cursor: "pointer" }}>감사 대시보드</button>
             )}
@@ -391,18 +387,17 @@ export default function VDRSystemPage() {
                       {/* 권한 유효성(isValidPermission)이 거짓일 때 버튼 비활성화 및 스타일 조절 */}
                       <button 
                         onClick={() => handleJoinVDR(vdr)} 
-                        disabled={loading || !isValidPermission} 
+                        disabled={loading} 
                         style={{ 
-                          background: isValidPermission ? THEME.deepBrown : "#A0A0A0", 
+                          background: THEME.deepBrown, 
                           color: THEME.paleYellow, 
                           border: "none", 
                           padding: "12px 28px", 
                           fontWeight: "bold", 
-                          cursor: isValidPermission ? "pointer" : "not-allowed",
-                          opacity: isValidPermission ? 1 : 0.6
+                          cursor: "pointer"
                         }}
                       >
-                        {isValidPermission ? "보안 룸 진입하기" : "진입 권한 없음"}
+                        보안 룸 진입하기
                       </button>
                     </div>
                   ))}
